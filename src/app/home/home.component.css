@@ -1,0 +1,110 @@
+mat-sidenav{
+    height: 100%;
+    width: 300px;
+
+}
+mat-sidenav-container{
+    height: 100%;
+}
+
+/* .gap{
+    margin-right: 1350px;
+} */
+
+.headingContainer{
+    width: 300px;
+    height: 47px;
+    display: flex;
+    justify-content:space-around;
+  
+}
+
+.welcomePadding{
+    margin-top: 12px;
+}
+
+.sideNavButtons{
+    width:300px;
+    height:40px;
+}
+
+.input-group{
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 20px;
+    width:800px;
+}
+
+.form-control{
+    height: 30px;
+}
+
+.btn-outline-secondary{
+    height: 30px;
+}
+
+.siteName{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+
+.d-inline-flex{
+    margin: 0px;
+}
+
+.loginButton{
+    /* margin-top: 10px; */
+    margin-left: 10px;
+}
+.notificationButton{
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+.shoppingCartButton{
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+
+ .spacer {
+    flex: 1 1 auto;
+}
+
+
+.foodIcon{
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.breakfastContainer{
+    width:100%;
+    height:320px;
+    border: solid black 1px;
+}
+
+.breakFastSection{
+    width:100%;
+    height: 300px;
+    border: solid black 1px;
+}
+
+.carousel-control-prev{
+    color: aqua;
+}
+
+#button-addon2{
+    background: white;
+    border: 1px solid white;
+    color:  #3F51B5;
+    
+}
+
+#button-addon2:hover{
+    color: white;
+    background: #3F51B5 ;
+    
+    
+
+}

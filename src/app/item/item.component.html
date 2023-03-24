@@ -1,0 +1,24 @@
+<div >
+    <div  class="row">
+        <div  *ngFor="let data of FullItemsData "   class="col-md-2">
+            <mat-card >
+                <div class="imageContainer" >
+                    <img mat-card-lg-image src={{data.url}}>
+                </div>
+                <div class="itemData">
+                  <h3>{{data.item}} - ₹ {{data.cost}}</h3> 
+                  <h3>{{data.cusine}}</h3>
+                </div>
+                <button color="primary" mat-flat-button (click)=" addToCart(data.item,data.cost,data.url,data.cusine,$event)">Add to Cart</button>
+              
+                
+            </mat-card>
+
+        </div>
+      
+       
+
+    </div>
+  
+    
+</div>

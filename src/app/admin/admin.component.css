@@ -1,0 +1,24 @@
+.container{
+    width:600px;
+    /* display:flex; */
+    border: solid black 2px;
+    border-radius: 10px;
+   
+
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.spacer {
+    flex: 1 1 auto;
+  }
+
+
+.title{
+    margin-top: 17px;
+
+
+}

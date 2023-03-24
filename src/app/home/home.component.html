@@ -1,0 +1,45 @@
+<!-- <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+    <mat-drawer-content>
+    
+    </mat-drawer-content>
+ </mat-drawer-container> -->
+
+
+ <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side">
+        <div class="headingContainer">
+            <h1 class="welcomePadding">Welcome to Menu</h1>
+        </div>
+        <hr>
+        <div>
+            <button class="sideNavButtons" mat-flat-button (click)="onClickAdmin()"><h1>Admin</h1></button>
+            
+        </div>
+      
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)="sidenav.toggle()"><mat-icon >menu</mat-icon></button>
+            <mat-icon class="foodIcon">fastfood</mat-icon>
+            <div class="input-group mb-2" >
+              <input type="text" class="form-control" placeholder="Search" >
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2"><mat-icon>search</mat-icon></button>
+            </div>
+
+
+            <span class="spacer"></span>
+            <button mat-flat-button color="primary" class="loginButton">Login & signup</button>
+            <button mat-icon-button class="notificationButton" (click)=" openNotificationsDialog()"><mat-icon>notifications</mat-icon></button>
+            <button mat-icon-button (click)="onClickCart()" class="shoppingCartButton"><mat-icon  [matBadge]="cartCount"  matBadgeColor="warn" >shopping_cart</mat-icon></button>
+
+        </mat-toolbar>
+       <app-restaurents></app-restaurents>
+       <app-item></app-item>
+      
+    </mat-sidenav-content>
+    
+ </mat-sidenav-container>
+
+

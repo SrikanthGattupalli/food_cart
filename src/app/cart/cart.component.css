@@ -1,0 +1,170 @@
+mat-sidenav{
+    height: 100%;
+    width: 300px;
+
+}
+mat-sidenav-container{
+    height: 100%;
+}
+
+
+
+.headingContainer{
+    width: 300px;
+    height: 47px;
+    display: flex;
+    justify-content:space-around;
+  
+}
+
+.welcomePadding{
+    margin-top: 12px;
+}
+
+.sideNavButtons{
+    width:300px;
+    height:40px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+
+
+
+.priceCardHeader{
+    display: flex;
+    justify-content: center;
+}
+
+.parent-container-2{
+    flex-direction:row;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    
+    /* border: solid 1px black; */
+    height: 100%;
+}
+
+.container-1{
+    justify-content: center;
+    /* border: solid 1px black; */
+    width: 60%;
+    
+    
+    
+}
+
+.container-2{
+    display: flex;
+    justify-content: center;
+    /* border: solid 1px black; */
+    width: 40%;
+}
+
+.cartItems{
+    display: flex;
+    width:700px;
+    margin: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.priceCard{
+    margin-top: 15px;
+    height: 600px;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow:scroll;
+}
+
+
+.cartItemButtons{
+    width: 150px;
+    margin: 15px;
+    border: 1px solid #3F51B5;
+}
+
+.cartItemButtons:hover{
+    background-color: #3F51B5;
+    color: white;
+}
+
+table td {
+    border:2px solid black;
+    
+}
+
+/* td{
+    width: 150px;
+    justify-content: center;
+} */
+
+.cell-1{
+    width: 300px;
+    
+}
+
+.cell-2{
+    width: 100px;
+    justify-content: center;
+    
+}
+
+.cell-3{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+mat-card-footer{
+    margin: 20px;
+}
+
+.emptyCart{
+    width:500px;
+
+}
+
+.emptyCartMessageBox{
+    display: flex;
+    justify-content: center;
+}
+.emptyCartMessage{
+    font-size: 2rem;
+}
+
+
+.priceCard::-webkit-scrollbar {
+    width: 8px;  
+              /* width of the entire scrollbar */
+}
+  
+.priceCard::-webkit-scrollbar-track {
+    background:white;        /* color of the tracking area */
+}
+  
+.priceCard::-webkit-scrollbar-thumb {
+    background-color:white;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 2px solid  white;  /* creates padding around scroll thumb */
+}
+
+
+/* body::-webkit-scrollbar {
+    width: 8px;  
+    height: 20px;             
+}
+  
+body::-webkit-scrollbar-track {
+    background:white;       
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #3F51B5;  
+    border-radius: 20px;       
+    border: 2px solid  #3F51B5;  
+} */

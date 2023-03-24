@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <!-- <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+    <mat-drawer-content>
+    
+    </mat-drawer-content>
+ </mat-drawer-container> -->
+
+
+ <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side">
+        <div class="headingContainer">
+            <h1 class="welcomePadding">Welcome to Menu</h1>
+        </div>
+        <hr>
+        <div>
+            <button class="sideNavButtons" mat-flat-button (click)="onClickAdmin()"><h1>Admin</h1></button>
+            
+        </div>
+      
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)="sidenav.toggle()"><mat-icon >menu</mat-icon></button>
+            <button mat-icon-button (click)="onClickHome()"><mat-icon>home</mat-icon></button>
+            <span class="spacer"></span>
+            <button mat-icon-button class="notificationButton"><mat-icon>notifications</mat-icon></button>
+
+        </mat-toolbar>
+        <div class="container"  *ngIf="CartDataPresent">
+            <div>
+                <div class="container-1">
+                    <div  *ngFor=" let item of cartData">
+                        <mat-card class="cartItems" >
+                            <div class="d-flex">
+                                <div class="p-2 flex-fill">
+                                    <img mat-card-lg-image src="{{item.url}}">
+                                </div>
+                                <div class="p-2 flex-fill">
+                                    <h3>Item : {{item.item |uppercase}}</h3>
+                                    <h3>Cusine : {{item.cusine|uppercase}}</h3>
+                                    <h3>Price :  ₹{{item.cost}}</h3>
+                                    
+                                    
+                                </div>
+                                <div class="p-2 flex-fill">
+                                    <div >
+                                        <div>
+                                             <button mat-flat-button class="cartItemButtons" (click)="deleteCartItem(item.id)">Remove Item</button>
+    
+                                        </div>
+                                        <div>
+                                            <button mat-flat-button class="cartItemButtons">View Item</button>
+    
+                                        </div>
+                                       
+                                        
+                                    </div>
+                                   
+                                </div>
+                              </div>
+                            <div>
+                                
+                            </div>
+                    
+                            
+                            
+                        </mat-card>
+                        
+                    </div>
+
+            </div>
+     
+            </div>
+            <div class="container-2" >
+                <div class="priceCard">
+                    <mat-card >
+                        <mat-card-header class="priceCardHeader"><h1><b> Total Cost</b></h1> </mat-card-header>
+                        <hr>
+                        <mat-card-content class="">
+                            <table *ngFor="let item of cartData">
+                                <tr>
+                                    <td class="cell-1">
+                                        <h3> {{item.item|uppercase}}  * 1</h3>
+                                       
+                                    </td>
+                                    <td class="cell-2">  {{item.cost}}</td>
+                                    
+                                </tr>
+  
+                            </table>
+
+                        </mat-card-content>
+                        <mat-card-footer>
+                            <h2><B>Total : {{totalCost}}</B></h2>
+
+                        </mat-card-footer>
+                        
+                        
+                    </mat-card>
+
+                </div>
+                
+              
+            </div>
+
+          
+            
+        </div>
+        <div class="container">
+            <div *ngIf="noCartData" >
+                <img class="emptyCart" src="https://t3.ftcdn.net/jpg/02/07/83/10/240_F_207831015_sXKAuf2tcsnrxOS1vfuvHSN2fDrdwtNf.jpg">
+                <div class="emptyCartMessageBox" >
+                    <h1 class="emptyCartMessage" ><b> Your cart is empty !</b></h1>
+                </div>
+            </div>
+        </div>
+        
+       
+
+      
+    </mat-sidenav-content>
+    
+ </mat-sidenav-container>
+
+
+
+        
+    </body>
+    <footer></footer>
+</html>
+
+

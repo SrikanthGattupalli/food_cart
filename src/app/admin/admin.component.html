@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+   
+            <button mat-icon-button (click)="onClickHome()"><mat-icon>home</mat-icon></button>
+            <h1 class="title">Admin Screen</h1>
+            <span class="spacer"></span>
+            
+            <button mat-icon-button (click)="onClickCart()"><mat-icon>shopping_cart</mat-icon></button>
+
+</mat-toolbar>
+<br>
+<diV class="container">
+   <br>
+    <form [formGroup]="jsonForm">
+        <label>select Type:</label>
+        <select class="form-select" aria-label="Default select example" formControlName="type">
+            <option selected>select type</option>
+            <option value="1">BreakFast</option>
+            <option value="2">Lunch</option>
+            <option value="3">Desert</option>
+            <option value="4">Snacks</option>
+            <option value="5">bevarages</option>
+          </select><br>
+        <label>Item :</label>
+        <input class="form-control" placeholder="enter item name" formControlName="item"><br>
+        <label>Cost :</label>
+        <input class="form-control" placeholder="eneter cost " formControlName="cost"><br>
+        <label>URL:</label>
+        <input class="form-control" placeholder="enter url" formControlName="url"><br>
+        <label>Cuisine :</label>
+        <input class="form-control" placeholder="enter cuisine" formControlName="cuisine"><br>
+        <div class="buttonContainer">
+            <button class="btn btn-primary" (click)="onSubmit()">submit</button>
+            <button class="btn btn-primary" (click)="dec()">bev</button>
+        </div>
+        <br>
+       
+        
+    </form>
+
+</diV>
