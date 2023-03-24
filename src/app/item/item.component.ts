@@ -83,13 +83,11 @@ export class ItemComponent implements OnInit {
   addToCart(item:any,cost:any,url:any,cusine:any,e:Event) {
 
     this.api.PostCartData(item,cost,url,cusine);
+    // adding to notifications
+    this.api.postNotificationsData(item);
     // console.log(item,cost,url,cusine)
     this.dataShare.displayCartData();
     this.dataShare.addToCartPressed.next(e);
-
-    
-
-
   }
 
 }

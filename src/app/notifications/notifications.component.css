@@ -1,9 +1,7 @@
 .notificationHeader{
-    display: flex;
-    justify-content: center;
     color: #3F51B5 ;
-    font-size: 2rem;
-    margin-top: 10px;
+    font-size: 1.7rem;
+    margin-left :20px;
 }
 
 body::-webkit-scrollbar {
@@ -21,4 +19,38 @@ body::-webkit-scrollbar-thumb {
     border: 2px solid  white;  /* creates padding around scroll thumb */
 }
 
+.header{
+    display: flex;
+    margin-top: 10px;
+    height: 30px;
+}
 
+.deleteIcon{
+    margin-left: 170px;
+    margin-top: 6px;
+    color:  #3F51B5 ;
+}
+
+.bellIcon{
+    margin-top: 3px;
+    margin-left: 10px;
+    color:  #3F51B5;
+    height: 20px;
+    width: 20px;
+
+}
+
+.notificationCart{
+    margin: 8px;
+
+}
+
+.notificationMessage{
+    margin-left: 10px;
+    margin: 15px;
+    margin-bottom: 0%;
+}
+
+.deleteButton{
+    color: #3F51B5;
+}

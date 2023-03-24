@@ -84,6 +84,16 @@ export class DataApiService {
     return this.http.delete('https://angular-practice-7f1b3-default-rtdb.firebaseio.com/cart/'+id+'.json').subscribe();
   }
 
+  postNotificationsData(item: any) {
+    this.http.post('https://angular-practice-7f1b3-default-rtdb.firebaseio.com/notifications.json',{item}).subscribe();
+
+  }
+
+  getNotificationsData(){
+   return this.http.get('https://angular-practice-7f1b3-default-rtdb.firebaseio.com/notifications.json');
+
+  }
+
 
 
 

@@ -4,7 +4,36 @@
 
     </head>
     <body>
-        <h1 class="notificationHeader"><b> Notifications</b></h1>
-        <hr>
+        <div class="header" >
+            <div class="bellIcon">
+                <mat-icon id="headerIcon">notifications</mat-icon>
+            </div>
+            <div class="notificationHeader">
+                <h1 ><b> Notifications</b></h1>
+            </div>
+            <div class="deleteIcon">
+                <mat-icon id="headerIcon" >delete</mat-icon> 
+            </div>  
+       
+        </div>
+        <hr>  
+
+        <div *ngFor="let data of notificationData">
+            <mat-card class="notificationCart">
+                <div class="d-flex justify-content-between">
+                    <div class="notificationMessage" >
+                        <h3 > {{  data.item}} is added to cart</h3>
+
+                    </div>
+                    <div >
+                        <button mat-icon-button class="deleteButton"><mat-icon>delete</mat-icon></button>
+                    </div>
+                   
+                </div>
+                
+
+            </mat-card>
+        </div>
+        
     </body>
 </html>
