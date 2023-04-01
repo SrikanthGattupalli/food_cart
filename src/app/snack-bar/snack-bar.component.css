@@ -1,0 +1,18 @@
+.custom-snackbar {
+    display: flex;
+    align-items: center;
+    background-color:white;
+    color: black;
+    
+    border-radius: 4px;
+  }
+  span {
+    flex-grow: 1;
+  }
+  button {
+    color: #fff;
+  }
+
+.message{
+    color:black;
+  }

@@ -16,6 +16,9 @@ import { AdminComponent } from './admin/admin.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RestaurentsComponent } from './restaurents/restaurents.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { SnackBarComponent } from './snack-bar/snack-bar.component';
 
 
 @NgModule({
@@ -27,6 +30,9 @@ import { NotificationsComponent } from './notifications/notifications.component'
     AdminComponent,
     RestaurentsComponent,
     NotificationsComponent,
+    LoginComponent,
+    SignupComponent,
+    SnackBarComponent,
     
   ],
   imports: [

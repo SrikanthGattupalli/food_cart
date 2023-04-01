@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -89,8 +90,19 @@ export class DataApiService {
 
   }
 
-  getNotificationsData(){
-   return this.http.get('https://angular-practice-7f1b3-default-rtdb.firebaseio.com/notifications.json');
+  async getNotificationsData(){
+    const data=await firstValueFrom( this.http.get('https://angular-practice-7f1b3-default-rtdb.firebaseio.com/notifications.json'));
+  //  return this.http.get('https://angular-practice-7f1b3-default-rtdb.firebaseio.com/notifications.json');
+  return data;
+
+  }
+
+  deleteAllNotificationsData(){
+    return this.http.delete('https://angular-practice-7f1b3-default-rtdb.firebaseio.com/notifications.json').subscribe();
+  }
+
+  deleteSingleNotification(id:any){
+    return this.http.delete('https://angular-practice-7f1b3-default-rtdb.firebaseio.com/notifications/'+id+'.json').subscribe();
 
   }
 

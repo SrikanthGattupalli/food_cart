@@ -4,8 +4,11 @@
     
     </mat-drawer-content>
  </mat-drawer-container> -->
-
-
+ <!DOCTYPE html>
+ <html>
+    <head></head>
+    <body>
+        
  <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side">
         <div class="headingContainer">
@@ -14,6 +17,7 @@
         <hr>
         <div>
             <button class="sideNavButtons" mat-flat-button (click)="onClickAdmin()"><h1>Admin</h1></button>
+            <button class="sideNavButtons" mat-flat-button (click)="logOut()"><h1>Log Out</h1></button>
             
         </div>
       
@@ -30,16 +34,38 @@
 
 
             <span class="spacer"></span>
-            <button mat-flat-button color="primary" class="loginButton">Login & signup</button>
+            <div  >
+                <button mat-flat-button color="primary" class="loginButton" (click)="toLoginPage()">Login & signup</button>
+            </div>
+            
+           
             <button mat-icon-button class="notificationButton" (click)=" openNotificationsDialog()"><mat-icon>notifications</mat-icon></button>
             <button mat-icon-button (click)="onClickCart()" class="shoppingCartButton"><mat-icon  [matBadge]="cartCount"  matBadgeColor="warn" >shopping_cart</mat-icon></button>
 
         </mat-toolbar>
        <app-restaurents></app-restaurents>
        <app-item></app-item>
+       <mat-paginator [length]="100"
+       [pageSize]="10"
+       [pageSizeOptions]="[6, 12, 24, 48]"
+       (page)="handlePageEvent($event)"
+       aria-label="Select page">
+       </mat-paginator>
+      
+
       
     </mat-sidenav-content>
     
  </mat-sidenav-container>
+
+
+
+    </body>
+    <footer>
+   
+        
+    </footer>
+ </html>
+
 
 

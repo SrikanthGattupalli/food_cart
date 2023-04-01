@@ -26,8 +26,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .deleteIcon{
-    margin-left: 170px;
-    margin-top: 6px;
+    margin-left: 150px;
+    margin-top: 8px;
+ 
     color:  #3F51B5 ;
 }
 
@@ -42,6 +43,7 @@ body::-webkit-scrollbar-thumb {
 
 .notificationCart{
     margin: 8px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px; */
 
 }
 
@@ -53,4 +55,9 @@ body::-webkit-scrollbar-thumb {
 
 .deleteButton{
     color: #3F51B5;
+}
+
+.noNotifications{
+    display: flex;
+    justify-content: center;
 }

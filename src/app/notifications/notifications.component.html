@@ -12,7 +12,8 @@
                 <h1 ><b> Notifications</b></h1>
             </div>
             <div class="deleteIcon">
-                <mat-icon id="headerIcon" >delete</mat-icon> 
+               
+                <mat-icon id="headerIcon" (click)="deleteAllNotifications()" >delete</mat-icon> 
             </div>  
        
         </div>
@@ -26,13 +27,17 @@
 
                     </div>
                     <div >
-                        <button mat-icon-button class="deleteButton"><mat-icon>delete</mat-icon></button>
+                        <button mat-icon-button class="deleteButton" (click)="deleteOneNotification(data.id)" ><mat-icon>delete</mat-icon></button>
                     </div>
                    
                 </div>
                 
 
             </mat-card>
+        </div>
+
+        <div *ngIf="NotificationsNotAvailable" class="noNotifications">
+           <h3 > No notifications available</h3>
         </div>
         
     </body>

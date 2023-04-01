@@ -7,6 +7,9 @@ import { DataApiService } from './data-api.service';
 })
 export class DataSharingService {
 addToCartPressed=new BehaviorSubject<Event>(null);
+sendPageSizeData=new BehaviorSubject<number>(null);
+sendPageIndexData=new BehaviorSubject<number>(null);
+paginationPageSizeClicked=new BehaviorSubject<Event>(null);
 
 
 

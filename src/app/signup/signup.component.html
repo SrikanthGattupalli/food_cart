@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div>
+            <mat-toolbar color="primary">
+
+            </mat-toolbar>
+            
+        </div>
+        <div class="container">
+            <div class="container-2">
+                    <div class="heading">
+                        <h2>Create Your Account</h2>
+                    </div>
+                    <br>
+                
+                <form [formGroup]="signUp">
+                  
+                    <label >Email : </label>
+                    <input class="form-control" type="email" placeholder="Enter your email" formControlName="email" required>
+                    <span class="errorMessage" *ngIf="signUp.get('email').touched &&  !(signUp.get('email').valid)">please enter email </span>
+                    
+                    <br>
+                    <br>
+                    <label >Password :</label>
+                   
+                    <input class="form-control" placeholder="Enter your password" formControlName="password" required>
+                    <span class="errorMessage" *ngIf="signUp.get('password').touched &&  !(signUp.get('password').valid)"> enter valid password Minimum 5 characters required !</span>
+                    <!-- <span *ngIf="signUp.controls.password.minlength"> password should be more than 8 characters</span> -->
+                    <br>
+                    <div class="loginDiv">
+                        <button class="btn btn-primary" (click)="userSignUp(signUp.value.email,signUp.value.password)" >SignUp</button>
+                    </div>
+
+                    <div class="signUp">
+                        <p>Navigate To : </p>
+                        <a routerLink="/login">Login</a>
+                    </div>
+                    
+                </form>
+    
+
+            </div>
+          
+        </div>
+    </body>
+</html>

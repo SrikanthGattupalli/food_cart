@@ -4,6 +4,8 @@ import { DataApiService } from '../service/data-api.service';
 import { DataSharingService } from '../service/data-sharing.service';
 import { DialogPosition, MatDialog } from '@angular/material/dialog';
 import { NotificationsComponent } from '../notifications/notifications.component';
+import { AuthService } from '../service/auth.service';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-home',
@@ -16,18 +18,27 @@ export class HomeComponent implements OnInit{
   displayAdminScreen=false;
   breakFastData:any[]=[];
   cartCount:number;
+  isUserLoggedIn:boolean=false;
+  isUserLoggedOut:boolean=false;
+  length = 50;
+  pageSize = 10;
+  pageIndex = 0;
+  pageSizeOptions = [5, 10, 25];
+  pageEvent: PageEvent;
  
 
   constructor(private router: Router,
     private api:DataApiService,
     private dataShare:DataSharingService,
-    private dialog:MatDialog
+    private dialog:MatDialog,
+    private auth:AuthService,
     ) { }
     
   ngOnInit() {
     // this.displayItems=true;
     // this.displayCartItems=false;
     // this.displayAdminScreen=false;
+    this.isUserLoggedIn=this.auth.isUserRegistered;
 
     this.getBreakfastDataOut();
     this.dataShare.addToCartPressed.subscribe(event => {
@@ -92,6 +103,28 @@ export class HomeComponent implements OnInit{
       
     });
     console.log('hello');
+  }
+
+
+  toLoginPage(){
+    this.router.navigate(['/login']);
+  }
+
+  logOut(){
+    this.auth.isUserRegistered=false;
+  }
+
+  handlePageEvent(e: PageEvent) {
+    this.pageEvent = e;
+    this.length = e.length;
+    this.pageSize = e.pageSize;
+    this.pageIndex = e.pageIndex;
+    this.dataShare.sendPageSizeData.next(this.pageSize);
+    this.dataShare.sendPageIndexData.next(this.pageIndex);
+   
+    // console.log( this.length);
+    // console.log( this.pageSize);
+    // console.log(this.pageIndex)
   }
 
  

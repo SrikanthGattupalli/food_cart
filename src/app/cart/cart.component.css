@@ -24,6 +24,7 @@ mat-sidenav-container{
 .sideNavButtons{
     width:300px;
     height:40px;
+    margin: 10px;
 }
 
 .spacer {
@@ -168,3 +169,8 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;       
     border: 2px solid  #3F51B5;  
 } */
+
+.loginButton{
+    /* margin-top: 10px; */
+    margin-left: 10px;
+}

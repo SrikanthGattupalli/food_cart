@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { NotificationsComponent } from '../notifications/notifications.component';
+import { AuthService } from '../service/auth.service';
 import { DataApiService } from '../service/data-api.service';
 import { DataSharingService } from '../service/data-sharing.service';
 
@@ -18,7 +21,9 @@ export class CartComponent implements OnInit  {
 
   constructor( private router:Router,
     private dataApi:DataApiService
-    ,private  dataShare:DataSharingService) {
+    ,private  dataShare:DataSharingService,
+    private dialog:MatDialog,
+    private auth:AuthService) {
     
   }
   ngOnInit(): void {
@@ -73,20 +78,47 @@ export class CartComponent implements OnInit  {
   }
 
   deleteCartItem(id: any){
-    this.dataApi.removeCartItem(id);
-    this.cartData=[];
-    this.totalCost=0;
-    setTimeout(()=>{
-      this.displayCartData();
-      this.dataShare.displayCartData();
-      
+    if(this.auth.isUserRegistered){
+      this.dataApi.removeCartItem(id);
+      this.cartData=[];
+      this.totalCost=0;
+      setTimeout(()=>{
+        this.displayCartData();
+        this.dataShare.displayCartData();
+        
+  
+      },1000);
 
-    },1000);
+    }else{
+      this.router.navigate(['/login']);
+    }
+   
     
 
    
 
   }
+
+  openNotificationsDialog() {
+   
+    const dialogRef = this.dialog.open(NotificationsComponent, {
+      width: '400px',
+      height: '800px',
+      position:{left:'0'}
+      
+    });
+    console.log('hello');
+  }
+
+
+  logOut(){
+    this.auth.isUserRegistered=false;
+  }
+
+  toLoginPage(){
+    this.router.navigate(['/login']);
+  }
+
 
   
 

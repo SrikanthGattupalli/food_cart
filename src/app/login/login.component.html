@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div class="imageContainer">
+            <div>
+                <mat-toolbar color="primary">
+    
+                </mat-toolbar>
+                
+            </div>
+            <div class="container">
+                <div class="container-2">
+                    <div class="heading">
+                        <h2>Log In To Your Account</h2>
+                    </div>
+                    <br>
+                    <form [formGroup]="login">
+                        
+                        <label >Email : </label>
+                        <input class="form-control"
+                         type="email" 
+                         placeholder="Enter your email" 
+                         formControlName="email" 
+                         required="minlength"
+                         [ngClass]="{'invalid-input': login.touched}">
+                        <span class="errorMessage" *ngIf="login.get('email').touched &&  !(login.get('email').valid)">please enter email </span>
+                        <br>
+                        <br>
+                        <label>Password :</label>
+                        
+                        <input class="form-control" placeholder="Enter your password" formControlName="password" required>
+                        <span class="errorMessage" *ngIf="login.get('password').touched &&  !(login.get('password').valid)">enter valid password  Minimum 5 characters required!</span>
+                        
+                        <br>
+                        <div class="loginDiv">
+                            <button class="btn btn-primary" (click)=" userLogin(login.value.email,login.value.password)" >Login</button>
+                        </div>
+                        <div class="signUp">
+                            <p>New to Food-Cart?</p>
+                            <a routerLink="/signup">Create Account</a>
+                        </div>
+                    </form>
+        
+    
+                </div>
+              
+            </div>
+
+        </div>
+      
+    </body>
+</html>
