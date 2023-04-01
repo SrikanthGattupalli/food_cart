@@ -86,11 +86,11 @@ mat-sidenav-container{
 .cartItemButtons{
     width: 150px;
     margin: 15px;
-    border: 1px solid #3F51B5;
+    border: 1px solid #28b485;
 }
 
 .cartItemButtons:hover{
-    background-color: #3F51B5;
+    background-color: #28b485;
     color: white;
 }
 
@@ -173,4 +173,14 @@ body::-webkit-scrollbar-thumb {
 .loginButton{
     /* margin-top: 10px; */
     margin-left: 10px;
+}
+
+
+.toolBar{
+    background-color: #28b485;
+}
+
+.btn-light{
+    background-color: #28b485;
+    border: solid 1px #28b485;;
 }

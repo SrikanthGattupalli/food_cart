@@ -1,75 +1,193 @@
-.container {
-  margin-top: 60px;
+// .container {
+ 
+//   width: 420px;
+//   height: 500px;
+//   border: solid 3px #3f51b5;
+//   border-radius: 10px;
+//   background-color: white;
+// }
+
+// .heading {
+//   display: flex;
+//   margin-top: 10px;
+//   justify-content: center;
+//   color: #3f51b5;
+// }
+
+// .loginDiv {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .btn-primary {
+//   margin-top: 30px;
+//   background-color: #3f51b5;
+// }
+
+// .btn-primary:hover {
+//   background-color: white;
+//   color: #3f51b5;
+// }
+
+// form {
+//   margin-top: 20px;
+// }
+
+// .signUp {
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 20px;
+// }
+
+// .errorMessage {
+//   color: red;
+// }
+
+// body {
+//   background-image: url("https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?w=1380&t=st=1679837114~exp=1679837714~hmac=06c8203d7e96160f2ef9db2d6a553d3b2ace60650c2027731226547fd878b609");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+
+
+// // .snackBarStyle{
+// //     background-color: #fff;
+// // }
+
+// // .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+// //     // background-color: var(--mdc-snackbar-container-color, inherit);
+// //     background-color: white;
+// // }
+
+// // .mat-mdc-snack-bar-container .mdc-snackbar__label {
+// //     color: var(--mdc-snackbar-supporting-text-color, inherit);
+// //     color: black;
+// // }
+
+// // .mat-mdc-snack-bar-container .mat-mdc-button.mat-mdc-snack-bar-action:not(:disabled) {
+// //     color: var(--mat-mdc-snack-bar-button-color, transparent);
+// //     --mat-mdc-button-persistent-ripple-color: currentColor;
+// //     color: #3F51B5;
+// // }
+
+// .mdc-snackbar__surface .ng-tns-c154-0{
+//     background-color: white;
+// }
+
+// .container-main{
+//   display: flex;
+//   justify-content:center ;
+//   align-items: center;
+//   background-image:linear-gradient(to right bottom ,
+//   rgba(126,213,111,0.8),
+//   rgba(40,180,131,0.8) ) ,
+//   url('https://img.freepik.com/premium-photo/assorted-indian-recipes-food-various_79295-7226.jpg?w=1060');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   height: 100%;
+//   width: 100%;
+
+// }
+.container{
+   
   width: 420px;
   height: 500px;
-  border: solid 3px #3f51b5;
+  border: solid 2px  #023020 ;
   border-radius: 10px;
   background-color: white;
+  /* animation-name: moveLeft;
+  animation-duration: 2s; */
+
 }
 
-.heading {
+
+
+.heading{
   display: flex;
   margin-top: 10px;
   justify-content: center;
-  color: #3f51b5;
+  color:  #023020;
 }
 
-.loginDiv {
+.loginDiv{
   display: flex;
   justify-content: center;
+
 }
 
-.btn-primary {
+.btn-primary{
+  width:70px;
   margin-top: 30px;
-  background-color: #3f51b5;
+  background-color: #28b485;
+  border: #023020;
+
 }
 
-.btn-primary:hover {
+.btn-primary:hover{
   background-color: white;
-  color: #3f51b5;
+  color: #023020;
+  border: #023020 1px solid;
 }
 
-form {
+form{
   margin-top: 20px;
+  
 }
 
-.signUp {
+.signUp{
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-.errorMessage {
+.errorMessage{
   color: red;
 }
 
 body {
-  background-image: url("https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?w=1380&t=st=1679837114~exp=1679837714~hmac=06c8203d7e96160f2ef9db2d6a553d3b2ace60650c2027731226547fd878b609");
+  
+}
+
+.container-main{
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  background-image:linear-gradient(to right bottom ,
+  rgba(126,213,111,0.8),
+  rgba(40,180,131,0.8) ) ,
+  url('https://img.freepik.com/premium-photo/assorted-indian-recipes-food-various_79295-7226.jpg?w=1060');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100%;
+  width: 100%;
+
 }
 
-
-// .snackBarStyle{
-//     background-color: #fff;
-// }
-
-// .mat-mdc-snack-bar-container .mdc-snackbar__surface {
-//     // background-color: var(--mdc-snackbar-container-color, inherit);
-//     background-color: white;
-// }
-
-// .mat-mdc-snack-bar-container .mdc-snackbar__label {
-//     color: var(--mdc-snackbar-supporting-text-color, inherit);
-//     color: black;
-// }
-
-// .mat-mdc-snack-bar-container .mat-mdc-button.mat-mdc-snack-bar-action:not(:disabled) {
-//     color: var(--mat-mdc-snack-bar-button-color, transparent);
-//     --mat-mdc-button-persistent-ripple-color: currentColor;
-//     color: #3F51B5;
-// }
-
-.mdc-snackbar__surface .ng-tns-c154-0{
-    background-color: white;
+input{
+  width: 350px;
+  border: black 1px solid;
 }
+
+.form{
+  display: flex;
+  justify-content: center;
+}
+
+/* 
+@keyframes moveLeft{
+  0%{
+      opacity:0;
+      transform: translate(-300px);
+  }
+  80%{
+      opacity:0;
+      transform: translate(-100px);
+  }
+
+  100%{
+      opacity:1;
+      transform: translate(0px);
+  }
+} */
+
+

@@ -24,7 +24,7 @@
 
     </mat-sidenav>
     <mat-sidenav-content>
-        <mat-toolbar color="primary">
+        <mat-toolbar class="toolBar">
             <button mat-icon-button (click)="sidenav.toggle()"><mat-icon >menu</mat-icon></button>
             <mat-icon class="foodIcon">fastfood</mat-icon>
             <div class="input-group mb-2" >
@@ -35,7 +35,7 @@
 
             <span class="spacer"></span>
             <div  >
-                <button mat-flat-button color="primary" class="loginButton" (click)="toLoginPage()">Login & signup</button>
+                <button  class="btn btn-light" (click)="toLoginPage()">Login & signup</button>
             </div>
             
            
@@ -43,16 +43,19 @@
             <button mat-icon-button (click)="onClickCart()" class="shoppingCartButton"><mat-icon  [matBadge]="cartCount"  matBadgeColor="warn" >shopping_cart</mat-icon></button>
 
         </mat-toolbar>
-       <app-restaurents></app-restaurents>
-       <app-item></app-item>
-       <mat-paginator [length]="100"
-       [pageSize]="10"
-       [pageSizeOptions]="[6, 12, 24, 48]"
-       (page)="handlePageEvent($event)"
-       aria-label="Select page">
-       </mat-paginator>
-      
+        <div class="backgroundColour">
+            <app-restaurents></app-restaurents>
 
+            <app-item></app-item>
+           
+        </div>
+        <mat-paginator [length]="100"
+        [pageSize]="10"
+        [pageSizeOptions]="[6, 12, 24, 48]"
+        (page)="handlePageEvent($event)"
+        aria-label="Select page">
+        </mat-paginator>
+       
       
     </mat-sidenav-content>
     

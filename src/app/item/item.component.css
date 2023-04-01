@@ -2,6 +2,7 @@ mat-Card{
     width:190px;
     height: 280px;
     margin: 20px;
+    border: #28b485 1px solid;;
    
     
 }
@@ -21,4 +22,8 @@ mat-card:hover{
 .itemData{
     display:grid;
     justify-content: center;
+}
+
+.button{
+    background-color:  #28b485;
 }

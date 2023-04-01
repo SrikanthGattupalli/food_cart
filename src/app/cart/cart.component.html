@@ -25,12 +25,12 @@
 
     </mat-sidenav>
     <mat-sidenav-content>
-        <mat-toolbar color="primary">
+        <mat-toolbar  class="toolBar">
             <button mat-icon-button (click)="sidenav.toggle()"><mat-icon >menu</mat-icon></button>
             <button mat-icon-button (click)="onClickHome()"><mat-icon>home</mat-icon></button>
             <span class="spacer"></span>
             <div  >
-                <button mat-flat-button color="primary" class="loginButton" (click)="toLoginPage()">Login & signup</button>
+                <button  class="btn btn-light" (click)="toLoginPage()">Login & signup</button>
             </div>
             <button mat-icon-button class="notificationButton" (click)=" openNotificationsDialog()"><mat-icon>notifications</mat-icon></button>
 

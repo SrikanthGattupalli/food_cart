@@ -98,15 +98,13 @@ mat-sidenav-container{
 #button-addon2{
     background: white;
     border: 1px solid white;
-    color:  #3F51B5;
+    color: #28b485;
     
 }
 
 #button-addon2:hover{
     color: white;
-    background: #3F51B5 ;
-    
-    
+    background: #28b485 ;
 
 }
 
@@ -124,3 +122,33 @@ mat-sidenav-content::-webkit-scrollbar-thumb {
     border-radius: 10px;       /* roundness of the scroll thumb */
     border: 2px solid  white;  /* creates padding around scroll thumb */
 }
+
+.toolBar{
+    background-color: #28b485;
+}
+
+.btn-light{
+    background-color: #28b485;
+    color: black;
+    border: #28b485;
+
+}
+
+
+.form-control{
+    border: 1px  solid white;
+}
+
+/* .backgroundColour{
+   
+    background-color:#C0EC83 ;
+    /* background: linear-gradient(to right bottom ,
+    rgba(126,213,111,0.8) ) ; */
+
+
+    /* background-image: url('https://as1.ftcdn.net/v2/jpg/05/49/92/72/1000_F_549927228_WP1L1Mt1fid2kKSX1JMKJZOTEYCdI6VK.jpg'); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+
+
+/* } */ 

@@ -1,5 +1,5 @@
 .notificationHeader{
-    color: #3F51B5 ;
+    color: #023020 ;
     font-size: 1.7rem;
     margin-left :20px;
 }
@@ -29,13 +29,13 @@ body::-webkit-scrollbar-thumb {
     margin-left: 150px;
     margin-top: 8px;
  
-    color:  #3F51B5 ;
+    color:  #28b485 ;
 }
 
 .bellIcon{
     margin-top: 3px;
     margin-left: 10px;
-    color:  #3F51B5;
+    color: #28b485;
     height: 20px;
     width: 20px;
 
@@ -54,7 +54,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .deleteButton{
-    color: #3F51B5;
+    color:#28b485;
 }
 
 .noNotifications{
