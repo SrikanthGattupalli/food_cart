@@ -10,6 +10,12 @@ addToCartPressed=new BehaviorSubject<Event>(null);
 sendPageSizeData=new BehaviorSubject<number>(null);
 sendPageIndexData=new BehaviorSubject<number>(null);
 paginationPageSizeClicked=new BehaviorSubject<Event>(null);
+searchItemClicked=new BehaviorSubject<Event>(null);
+searchedText=new BehaviorSubject<string>(null);
+cancelSearched=new BehaviorSubject<Event>(null);
+mealSelected=new BehaviorSubject<string>(null);
+mealFilterClicked=new BehaviorSubject<Event>(null);
+sortSelected=new BehaviorSubject<string>(null);
 
 
 
@@ -19,6 +25,8 @@ paginationPageSizeClicked=new BehaviorSubject<Event>(null);
   CartDataPresentDataSharing=true;
   noCartDataDataSharing:boolean=false;
   cartItemsCountDataSharing:number=0;
+  SearchedWord:string='';
+  mealClicked:string='';
 
 
   constructor( private router:Router,

@@ -72,6 +72,10 @@ export class DataApiService {
     return this.http.get('https://angular-practice-7f1b3-default-rtdb.firebaseio.com/beverages.json');
   }
 
+  getDesertData(){
+    return this.http.get('https://angular-practice-7f1b3-default-rtdb.firebaseio.com/desert.json');
+  }
+
   PostCartData(item:any,cost:any,url:any,cusine:any){
     this.http.post('https://angular-practice-7f1b3-default-rtdb.firebaseio.com/cart.json',{item,cost,url,cusine}).subscribe();
 

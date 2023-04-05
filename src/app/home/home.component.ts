@@ -6,6 +6,8 @@ import { DialogPosition, MatDialog } from '@angular/material/dialog';
 import { NotificationsComponent } from '../notifications/notifications.component';
 import { AuthService } from '../service/auth.service';
 import { PageEvent } from '@angular/material/paginator';
+import { FormControl, FormGroup } from '@angular/forms';
+import { MatSelectChange } from '@angular/material/select';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +15,8 @@ import { PageEvent } from '@angular/material/paginator';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
+  searchField:FormGroup;
+  mealForm:FormGroup;
   displayItems=true;
   displayCartItems=false;
   displayAdminScreen=false;
@@ -25,6 +29,16 @@ export class HomeComponent implements OnInit{
   pageIndex = 0;
   pageSizeOptions = [5, 10, 25];
   pageEvent: PageEvent;
+  searchedText:any;
+  searchButtonPressed:boolean=true;
+  cancelButtonPressed:boolean=false;
+  meals=new FormControl(null);
+  availableOptions:any[]=[
+    {name:'Breakfast',value:1},
+   {name:'Lunch',value:2},
+   {name:'Snacks',value:3},
+   {name:'Bevarages',value:4},
+   {name:'Deserts',value:5},]
  
 
   constructor(private router: Router,
@@ -32,6 +46,7 @@ export class HomeComponent implements OnInit{
     private dataShare:DataSharingService,
     private dialog:MatDialog,
     private auth:AuthService,
+
     ) { }
     
   ngOnInit() {
@@ -55,6 +70,16 @@ export class HomeComponent implements OnInit{
     })
 
     // console.log(this.cartCount);
+     
+    this.searchField=new FormGroup({
+      'search': new FormControl(null),
+
+    })
+
+    
+   
+  
+    // this.dataShare.SearchedWord=this.searchField.value.search;
 
     
   }
@@ -127,11 +152,45 @@ export class HomeComponent implements OnInit{
     // console.log(this.pageIndex)
   }
 
+  search(e:Event){
+    this.dataShare.searchedText.next(this.searchField.value.search);
+    this.dataShare.searchItemClicked.next(e);
+   this.cancelButtonPressed=true;
+   this.searchButtonPressed=false;
+  //  console.log(this.searchField.value.search);
  
+    
+  }
 
 
+  cancel(e:Event){
+    this.cancelButtonPressed=false;
+    this.searchButtonPressed=true;
+    this.dataShare.cancelSearched.next(e);
+    this.searchField.reset();
+    
 
+  }
 
-  
+  onSelectionChange(event: any) {
+    this.dataShare.mealFilterClicked.next(event);
+    this.dataShare.mealClicked=event.value;
+    this.dataShare.mealSelected.next(event.value);
+    // setTimeout(() => {
+    //  
+
+    // },1000)
+    
+   
+    console.log(event.value);
+  }
+
+  onSelectionSortChange(event: any) {
+   this.dataShare.sortSelected.next(event.value);
+    
+   
+    console.log(event.value);
+  }
+ 
 
 }

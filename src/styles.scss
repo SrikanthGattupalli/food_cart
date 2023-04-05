@@ -98,4 +98,80 @@ body {
     .mat-mdc-snack-bar-container .mat-mdc-button.mat-mdc-snack-bar-action:not(:disabled) {
         color:  #023020;
     }
+
+
+    ::ng-deep .mat-select-underline {
+      background-color: red; /* change to the desired color */
+      color: red;
+    }
+
+
+    // .not-empty-select.mat-selected {
+    //   color: green !important;
+    // }
+    
+    // :host /deep/ .mat-select-value-text {
+    //   color: green !important;
+    // }
+
+
+    .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+      // color: rgba(63, 81, 181, 0.87);
+      color:black;
+  }
+  
+  .mat-mdc-form-field.mat-focused.mat-primary .mat-mdc-select-arrow {
+      // color: rgba(63,81,181,.87);
+      color:black;
+  }
+  
+  .mat-mdc-form-field.mat-focused.mat-primary{
+    
+  }
+  .mat-form-field.mat-focused .mat-form-field-ripple{
+      // background-color: red;
+      color: #28b485;
+  }
+  
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+      // background-color: blue;
+      color: #28b485;
+      
+
+  }
+
+
+  .cdk-overlay-pane:not(.mat-mdc-select-panel-above) .mdc-menu-surface.mat-mdc-select-panel::-webkit-scrollbar {
+    width: 8px;  
+              /* width of the entire scrollbar */
+}
+  
+.cdk-overlay-pane:not(.mat-mdc-select-panel-above) .mdc-menu-surface.mat-mdc-select-panel::-webkit-scrollbar-track {
+    background:white;        /* color of the tracking area */
+}
+
+.cdk-overlay-pane:not(.mat-mdc-select-panel-above) .mdc-menu-surface.mat-mdc-select-panel::-webkit-scrollbar-thumb {
+    background-color: white;    /* color of the scroll thumb */
+    border-radius: 10px;       /* roundness of the scroll thumb */
+    border: 2px solid  white;  /* creates padding around scroll thumb */
+}
+
+
+// select box
+.mat-primary .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-minimal::after, .mat-primary .mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-minimal::after {
+  color: #28b485;
+}
+
+.mat-primary .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+  color: #28b485 ;
+}
+
+.mdc-text-field--filled .mdc-line-ripple::after {
+  // border-bottom-color: var(--mdc-theme-primary, #3f51b5);
+  border-bottom-color: #28b485;
+}
+
+
+
+  
 }

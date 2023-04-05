@@ -33,15 +33,17 @@ mat-sidenav-container{
     margin-top: 10px;
     margin-left: 30px;
     margin-right: 20px;
-    width:800px;
+    width:600px;
 }
 
 .form-control{
-    height: 30px;
+    height: 35px;
 }
 
 .btn-outline-secondary{
-    height: 30px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
 }
 
 .siteName{
@@ -137,6 +139,12 @@ mat-sidenav-content::-webkit-scrollbar-thumb {
 
 .form-control{
     border: 1px  solid white;
+    
+    
+}
+
+input:focus {
+    outline: none;
 }
 
 /* .backgroundColour{
@@ -152,3 +160,41 @@ mat-sidenav-content::-webkit-scrollbar-thumb {
 
 
 /* } */ 
+
+.filter{
+   margin-left: 20px;
+   margin-top: 20px;
+   color: black;
+    
+} 
+
+.selectFilter{
+   color:#28b485
+   /* width: 250px;
+   height: 100px;
+   border: #28b485 1px solid; */
+   
+} 
+
+.filterContainer{
+    display: flex;
+    justify-content: flex-start;
+   
+    width: 100%;
+    height: 100px;
+}
+
+mat-select::-webkit-scrollbar {
+    width: 8px;  
+              /* width of the entire scrollbar */
+}
+  
+mat-select::-webkit-scrollbar-track {
+    background:white;        /* color of the tracking area */
+}
+  
+mat-select::-webkit-scrollbar-thumb {
+    background-color: white;    /* color of the scroll thumb */
+    border-radius: 10px;       /* roundness of the scroll thumb */
+    border: 2px solid  white;  /* creates padding around scroll thumb */
+}

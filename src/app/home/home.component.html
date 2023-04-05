@@ -19,19 +19,34 @@
             <button class="sideNavButtons" mat-flat-button (click)="onClickAdmin()"><h1>Admin</h1></button>
             <button class="sideNavButtons" mat-flat-button (click)="logOut()"><h1>Log Out</h1></button>
             
-        </div>
-      
-
+        </div>   
     </mat-sidenav>
     <mat-sidenav-content>
         <mat-toolbar class="toolBar">
             <button mat-icon-button (click)="sidenav.toggle()"><mat-icon >menu</mat-icon></button>
             <mat-icon class="foodIcon">fastfood</mat-icon>
-            <div class="input-group mb-2" >
-              <input type="text" class="form-control" placeholder="Search" >
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2"><mat-icon>search</mat-icon></button>
-            </div>
+            <div class="input-group mb-2" [formGroup]="searchField">
+              <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchedText" formControlName="search" >
+              
+                <button class="btn btn-outline-secondary"
+                 type="button" id="button-addon2" 
+                 (click)="search($event)" 
+                 *ngIf="searchButtonPressed"
+                 ><mat-icon>search</mat-icon></button>
 
+            
+
+             
+                <button 
+                *ngIf="cancelButtonPressed"
+                class="btn btn-outline-secondary"
+                 type="button" id="button-addon2"
+                  (click)=" cancel($event)" 
+                  ><mat-icon>cancel</mat-icon></button>
+             
+             
+            </div>
+         
 
             <span class="spacer"></span>
             <div  >
@@ -44,7 +59,37 @@
 
         </mat-toolbar>
         <div class="backgroundColour">
-            <app-restaurents></app-restaurents>
+            <div class="filterContainer">
+                <div class="filter" >
+                    <mat-form-field  class="selectFilter">
+                        <mat-label>Select Meal</mat-label>
+                        <mat-select  (selectionChange)="onSelectionChange($event)" >
+                            <mat-option  value="all">All Items</mat-option>
+                            <mat-option value="breakfast">Breakfast</mat-option>
+                            <mat-option  value="lunch">Lunch</mat-option>
+                            <mat-option  value="snacks">Snacks</mat-option>
+                            <mat-option  value="bevarages">Bevarages</mat-option>
+                            <mat-option  value="deserts">Deserts</mat-option>
+                            
+
+                    </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="filter">
+                    <mat-form-field class="selectFilter">
+                    <mat-label>Sort</mat-label>
+                    <mat-select (selectionChange)="onSelectionSortChange($event)">
+                       <mat-option value="name">Name</mat-option>
+                       <mat-option value="price">Price</mat-option>
+                       <!-- <mat-option value="cusine">Cusine</mat-option> -->
+                    </mat-select>
+                    </mat-form-field>
+                </div>
+
+            </div>
+         
+            <!-- <app-restaurents></app-restaurents> -->
 
             <app-item></app-item>
            
